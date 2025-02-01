@@ -8,7 +8,6 @@
 - **ダークモード切り替え**  
 - **映画カードクリックで詳細データ (Plot) を取得表示**
 
-![スクリーンショットの例](https://via.placeholder.com/600x300?text=App+Screenshot)
 
 ---
 
