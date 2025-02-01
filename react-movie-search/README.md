@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 映画検索アプリ (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+このプロジェクトは、React を使った映画検索アプリです。OMDb API を利用し、映画タイトルをはじめとする情報を取得して表示します。  
+また、以下のような機能を備えています。
 
-## Available Scripts
+- **タイトル / 年 / 種類** (映画・シリーズ・ゲーム) で検索  
+- **ローカルストレージ** に基づく検索履歴機能  
+- **ダークモード切り替え**  
+- **映画カードクリックで詳細データ (Plot) を取得表示**
 
-In the project directory, you can run:
+![スクリーンショットの例](https://via.placeholder.com/600x300?text=App+Screenshot)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 主な使用技術
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React 18 (create-react-app)**  
+- **JavaScript (ES2020+)**  
+- **OMDb API**  
+- **localStorage** (検索履歴の保存)  
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## セットアップ
 
-### `npm run build`
+1. **リポジトリをクローン**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/youtaug/react-movie-search.git
+   cd react-movie-search
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **依存パッケージをインストール**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    npm install
 
-### `npm run eject`
+3. **開発サーバーを起動**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ ```bash
+    npm sta
+    
+使い方
+画面上部にあるフォームで、タイトル / 公開年 / 種類 を指定し「検索」ボタンを押します。
+一致する作品がある場合は下部に一覧表示されます。
+ダークモード切り替えボタン を押すと、背景色が暗くなり文字が明るくなります。
+検索履歴 が最大 5 件まで保存され、次回起動時もリストからワンクリックで再検索可能です。
+映画カードをクリック すると、詳細情報（Plot や監督など）が表示されます。
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**ディレクトリ構成**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+react-movie-search/
+├─ .env                      # APIキー
+├─ public/
+├─ src/
+│   ├─ components/
+│   │   ├─ MovieSearch.js    # 検索フォーム
+│   │   ├─ MovieList.js      # 検索結果の一覧
+│   │   └─ MovieCard.js      # 各映画カード (詳細取得機能つき)
+│   ├─ App.js                # アプリ全体の状態管理/ダークモード/履歴管理
+│   ├─ App.css               # スタイル (ダークモード切り替え)
+│   └─ index.js
+└─ package.json
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+作者 / youtaig277@gmail.com
+名前 / yutas
+GitHub youtaug
